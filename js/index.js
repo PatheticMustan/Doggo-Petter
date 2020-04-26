@@ -1,4 +1,4 @@
-var dogClicker = 0;
+if (isNaN(localStorage.getItem("dogClicker"))) localStorage.setItem("dogClicker", 0);
 
 function getDogImage() {
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -8,11 +8,14 @@ function getDogImage() {
 
             $(".dog-img").attr("src", responseJson.message);
             
-            $("#dogclicks").html(`Doggos Pet: ${dogClicker++}`);
+            $("#dogclicks").html(`Doggos Pet: ${localStorage.getItem("dogClicker")}`);
         })
         .catch(error => console.warn(error));
 }
 
 getDogImage()
 
-$("body").click(() => getDogImage())
+$("body").click(() => {
+    localStorage.setItem("dogClicker", +localStorage.getItem("dogClicker") + 1)
+    getDogImage();
+})

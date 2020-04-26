@@ -18,7 +18,7 @@
 }
 
 .dog-img {
-    max-width: 100%;
+    width: 90vh;
     max-height: 90vh;
     margin: auto;
 }
