@@ -1,3 +1,5 @@
+var dogClicker = 0;
+
 function getDogImage() {
     fetch("https://dog.ceo/api/breeds/image/random")
         .then(response => response.json())
@@ -5,11 +7,12 @@ function getDogImage() {
             console.log(responseJson);  
             let imageLink = responseJson.message;
             $(".dog-img").attr("src", imageLink);
-            console.log($("body").attr("style"));
+            dogClicker++;
+            $("#dogclicks").html(`Eyebleach Counter: ${dogClicker}`);
         })
         .catch(error => alert('Something went wrong. Try again later.'));
 }
 
 getDogImage()
 
-$(".dog-img").click(() => getDogImage())
+$("body").click(() => getDogImage())
