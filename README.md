@@ -1,1 +1,1 @@
-# Instacart-Slot-Checker
+# Doggo-Petter
