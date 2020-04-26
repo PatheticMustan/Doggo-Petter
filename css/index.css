@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.dog-container {
+    display: grid;
+    height: 100%;
+}
+.dog-img {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+/*html { 
+    background: url(https://images.dog.ceo/breeds/akita/Akita_hiking_in_Shpella_e_Pellumbasit.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/

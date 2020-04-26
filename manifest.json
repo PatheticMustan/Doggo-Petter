@@ -13,5 +13,9 @@
     "browser_action": {
         "default_icon": "images/128.png",
         "default_popup": "index.html"
+    },
+
+    "chrome_url_overrides" : {
+        "newtab": "index.html"
     }
 }
