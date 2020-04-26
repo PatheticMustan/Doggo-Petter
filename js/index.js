@@ -5,12 +5,12 @@ function getDogImage() {
         .then(response => response.json())
         .then(responseJson => {
             console.log(responseJson);  
-            let imageLink = responseJson.message;
-            $(".dog-img").attr("src", imageLink);
-            dogClicker++;
-            $("#dogclicks").html(`Eyebleach Counter: ${dogClicker}`);
+
+            $(".dog-img").attr("src", responseJson.message);
+            
+            $("#dogclicks").html(`Doggos Pet: ${dogClicker++}`);
         })
-        .catch(error => alert('Something went wrong. Try again later.'));
+        .catch(error => console.warn(error));
 }
 
 getDogImage()
