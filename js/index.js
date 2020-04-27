@@ -13,8 +13,8 @@ function getDogImage() {
         .catch(error => console.warn(error));
 }
 
-$("#dogclicks").html(`Doggos Pet: ${localStorage.getItem("dogClicker")}`);
-getDogImage()
+$("#dogclicks").html(`Doggos Pet: ${localStorage.getItem("dogClicker") || 0}`);
+getDogImage();
 
 $("body").click(() => {
     localStorage.setItem("dogClicker", +localStorage.getItem("dogClicker") + 1)
